@@ -44,18 +44,21 @@ body{
 .second-page{
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 .back-btn{
-    width: 40px;
-    padding-bottom: 3px;
-    margin: 50px 0 30px 150px;
+    width: 50px;
+    padding-bottom: 5px;
     border-radius: 10px;
     background-color: transparent;
-    border: 1px solid black;
+    border: 1px solid rgba(0, 0, 0, 0.626);
     cursor: pointer;
-    box-shadow: 1px 1px 4px rgba(16, 16, 16, 0.495);
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.571);
     transition: all 0.15s;
     font-size: 1.5em;
+    position: absolute;
+    top: 15px;
+    left: 20px;
 }
 .back-btn:hover{
     box-shadow: none;
@@ -66,7 +69,7 @@ body{
     font-weight: 900;
     font-size: 1.5rem;
     font-style: italic;
-    margin-top: 50px;
+    margin: 50px auto;
     height: 30px;
     width: 100%;
 }
@@ -97,9 +100,6 @@ body{
 }
 
 @media(min-width: 321px) and (max-width: 500px){
-    .back-btn{
-        margin: 50px 0 30px 67px;
-    }
     .main{
         grid-template-columns: repeat(3,80px);
     }
@@ -109,9 +109,6 @@ body{
     }
 }
 @media(min-width: 500px) and (max-width: 700px){
-    .back-btn{
-        margin: 50px 0 30px 140px;
-    }
     .main{
         grid-template-columns: repeat(3,130px);
     }
