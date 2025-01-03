@@ -26,6 +26,7 @@ class ArrayBoard{
     setToZeroes(){
         for(let i = 0; i < 3; i++)
             for(let j = 0; j < 3; j++) this.arrayBoard[i][j] = null;
+        this.loadBoardToStorage();
     }
     checkRowWin(move){
         for(let i = 0; i < 3; i++){
@@ -64,6 +65,17 @@ class ArrayBoard{
             else count++;
         }
         if(count === 3) return 1;
+    }
+    countXcountO(){
+        let countX = 0;
+        let countO = 0;
+        for(let i = 0; i < 2; i++){
+            for(let j = 0; j < 2; j++){
+                if(arr.arrayBoard[i][j] === 'X') countX = countX + 1;
+                else if(arr.arrayBoard[i][j] === 'O') countO = countO + 1;
+            }
+        }
+        return [countX,countO];
     }
 }
 
